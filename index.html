@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminaries - Muslim Scientists Exhibition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+    </style>
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+    <div class="scroll-container">
+        <!-- Mobile Menu Toggle -->
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+
+        <!-- Navigation Section -->
+        <header class="fixed top-0 left-0 right-0 z-50 glass-heavy">
+            <nav class="container mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="#hero" class="text-2xl font-bold neon-text">Luminaries</a>
+
+                    <!-- Desktop Navigation -->
+                    <div class="desktop-nav hidden md:flex space-x-8">
+                        <a href="#hero"
+                            class="text-gray-300 hover:text-white transition-all duration-300 relative group hover-glow">
+                            Home
+                            <span
+                                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#timeline"
+                            class="text-gray-300 hover:text-white transition-all duration-300 relative group hover-glow">
+                            Timeline
+                            <span
+                                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#ibn-sina"
+                            class="text-gray-300 hover:text-white transition-all duration-300 relative group hover-glow">
+                            Ibn Sina
+                            <span
+                                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#al-khwarizmi"
+                            class="text-gray-300 hover:text-white transition-all duration-300 relative group hover-glow">
+                            Al Khwarizmi
+                            <span
+                                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#al-biruni"
+                            class="text-gray-300 hover:text-white transition-all duration-300 relative group hover-glow">
+                            Al Biruni
+                            <span
+                                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button - Only on small devices -->
+                    <div class="mobile-nav-trigger">
+                        <label for="mobile-menu-toggle" class="cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu-overlay">
+            <label for="mobile-menu-toggle" class="absolute top-4 right-4 cursor-pointer z-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </label>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <h3 class="text-xl font-bold text-white">Menu</h3>
+                <label for="mobile-menu-toggle" class="cursor-pointer">
+                    <div class="mobile-menu-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                </label>
+            </div>
+            <div class="flex flex-col space-y-6 mt-8">
+
+                <label for="mobile-menu-toggle"
+                    class="text-gray-300 hover:text-white transition text-lg flex items-center cursor-pointer">
+                    <span class="mr-3">🏠</span>
+                    <a href="#hero" class="w-full">Home</a>
+                </label>
+
+                <label for="mobile-menu-toggle"
+                    class="text-gray-300 hover:text-white transition text-lg flex items-center cursor-pointer">
+                    <span class="mr-3">📅</span>
+                    <a href="#timeline" class="w-full">Timeline</a>
+                </label>
+
+                <label for="mobile-menu-toggle"
+                    class="text-gray-300 hover:text-white transition text-lg flex items-center cursor-pointer">
+                    <span class="mr-3">⚕️</span>
+                    <a href="#ibn-sina" class="w-full">Ibn Sina</a>
+                </label>
+
+                <label for="mobile-menu-toggle"
+                    class="text-gray-300 hover:text-white transition text-lg flex items-center cursor-pointer">
+                    <span class="mr-3">🧮</span>
+                    <a href="#al-khwarizmi" class="w-full">Al Khwarizmi</a>
+                </label>
+
+                <label for="mobile-menu-toggle"
+                    class="text-gray-300 hover:text-white transition text-lg flex items-center cursor-pointer">
+                    <span class="mr-3">🔭</span>
+                    <a href="#al-biruni" class="w-full">Al Biruni</a>
+                </label>
+
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section id="hero"
+            class="scroll-section min-h-screen flex items-center justify-center theme-blue relative overflow-hidden pattern-bg">
+            <!-- Hero Lighting Effects - Improved with better colors and animations -->
+            <div class="hero-light-top"></div>
+            <div class="hero-light-bottom"></div>
+            <div class="hero-light-middle"></div>
+            <div class="hero-light-left"></div>
+            <div class="hero-light-right"></div>
+
+            <!-- Background Shapes -->
+            <div class="absolute top-20 left-20 w-64 h-64 bg-blue-900 opacity-20 rounded-full morph-animation"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-blue-800 opacity-20 rounded-full morph-animation"
+                style="animation-delay: 2s;"></div>
+
+            <!-- Additional Floating Elements -->
+            <div class="floating-element w-32 h-32 top-1/4 left-1/4 opacity-30"></div>
+            <div class="floating-element w-24 h-24 bottom-1/3 right-1/3 opacity-20" style="animation-delay: 1s;"></div>
+            <div class="floating-element w-40 h-40 top-1/2 right-1/4 opacity-25" style="animation-delay: 2s;"></div>
+
+            <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+                <h1
+                    class="hero-title text-5xl md:text-7xl lg:text-8xl font-playfair font-black mb-6 leading-tight text-shadow fade-in-up">
+                    <span class="gradient-text bg-gradient-to-r from-blue-400 to-cyan-400 ">Luminaries</span> of
+                    Knowledge
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 fade-in-up fade-in-up-1">
+                    Journey through the minds of Muslim scientists who shaped our understanding of the world
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up fade-in-up-2">
+                    <a href="#timeline"
+                        class="btn-glow inline-block px-8 py-4 glass-heavy rounded-full text-lg font-medium hover:bg-white hover:bg-opacity-10 transition-all duration-300 interactive-element">
+                        Begin Exploration
+                    </a>
+                    <a href="#numbers"
+                        class="btn-glow inline-block px-8 py-4 border border-gray-600 rounded-full text-lg font-medium hover:bg-white hover:bg-opacity-10 transition-all duration-300 interactive-element">
+                        View Achievements
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="scroll-section py-20 theme-blue relative overflow-hidden pattern-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-4xl md:text-5xl font-playfair font-black text-center mb-16 fade-in-up">
+                    <span class="gradient-text bg-gradient-to-r from-blue-400 to-purple-400">Golden Age Timeline</span>
+                </h2>
+
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div
+                        class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 hidden md:block">
+                    </div>
+
+                    <!-- Timeline Items -->
+                    <div class="space-y-12">
+                        <div class="flex items-center fade-in-up fade-in-up-1">
+                            <div class="w-full md:w-1/2 pr-0 md:pr-8 text-center md:text-right">
+                                <div class="glass-heavy rounded-2xl p-6 inline-block hover-lift">
+                                    <h3 class="text-2xl font-bold text-blue-300">750 CE</h3>
+                                    <p class="text-gray-300">Beginning of Abbasid Caliphate</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex w-12 h-12 z-10 justify-center items-center">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="w-full md:w-1/2 pl-0 md:pl-8"></div>
+                        </div>
+
+                        <div class="flex items-center fade-in-up fade-in-up-2">
+                            <div class="w-full md:w-1/2 pr-0 md:pr-8 order-2 md:order-1"></div>
+                            <div class="hidden md:flex w-12 h-12 z-10 justify-center items-center order-1 md:order-2">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="w-full md:w-1/2 pl-0 md:pl-8 order-1 md:order-2">
+                                <div class="glass-heavy rounded-2xl p-6 inline-block hover-lift">
+                                    <h3 class="text-2xl font-bold text-purple-300">825 CE</h3>
+                                    <p class="text-gray-300">House of Wisdom Established</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center fade-in-up fade-in-up-3">
+                            <div class="w-full md:w-1/2 pr-0 md:pr-8 text-center md:text-right">
+                                <div class="glass-heavy rounded-2xl p-6 inline-block hover-lift">
+                                    <h3 class="text-2xl font-bold text-emerald-300">900 CE</h3>
+                                    <p class="text-gray-300">Peak of Scientific Achievement</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex w-12 h-12 z-10 justify-center items-center">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="w-full md:w-1/2 pl-0 md:pl-8"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ibn Sina Section -->
+        <section id="ibn-sina" class="scroll-section theme-emerald relative overflow-hidden pattern-bg">
+            <!-- Background Shapes -->
+            <div class="absolute top-10 right-10 w-64 h-64 bg-emerald-900 opacity-20 rounded-full morph-animation">
+            </div>
+            <div class="absolute bottom-10 left-10 w-96 h-96 bg-teal-800 opacity-20 rounded-full morph-animation"
+                style="animation-delay: 2s;"></div>
+
+            <!-- Additional Floating Elements -->
+            <div class="floating-element w-28 h-28 top-1/4 left-1/4 opacity-30"></div>
+            <div class="floating-element w-20 h-20 bottom-1/3 right-1/3 opacity-20" style="animation-delay: 1s;"></div>
+
+            <div class="container mx-auto px-6 py-20 lg:py-0 lg:min-h-screen flex items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
+                    <!-- Left Side - Scientist Image -->
+                    <div class="order-2 lg:order-1">
+                        <div class="image-container glow-ultra fade-in-up fade-in-up-1">
+                            <img src="j.jpg" alt="Muslim Scientist Portrait">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Scientist Info -->
+                    <div class="order-1 lg:order-2 space-y-6">
+                        <div
+                            class="inline-block px-4 py-2 bg-emerald-500/20 rounded-full text-emerald-300 text-sm font-medium fade-in-up fade-in-up-1">
+                            Medicine</div>
+                        <h2
+                            class="card-title text-5xl md:text-6xl lg:text-7xl font-playfair font-black text-shadow fade-in-up fade-in-up-2">
+                            Ibn Sina</h2>
+                        <p class="text-xl md:text-2xl text-emerald-300 fade-in-up fade-in-up-2">The Prince of Physicians
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed fade-in-up fade-in-up-3">
+                            Also known as Avicenna, Ibn Sina was a Persian polymath who is regarded as one of the most
+                            significant physicians, astronomers, thinkers and writers of the Islamic Golden Age. His
+                            most famous work, "The Canon of Medicine," was a standard medical text at many medieval
+                            universities.
+                        </p>
+                        <div class="pt-4 fade-in-up fade-in-up-4">
+                            <h3 class="text-2xl font-bold mb-3">Key Achievements</h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex items-start">
+                                    <span class="text-emerald-400 mr-2">•</span>
+                                    Authored "The Canon of Medicine" used for 600+ years
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-emerald-400 mr-2">•</span>
+                                    Pioneered the scientific method in medicine
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-emerald-400 mr-2">•</span>
+                                    Wrote extensively on philosophy and astronomy
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discoveries Section -->
+            <div class="container mx-auto px-6 py-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 fade-in-up">Major Discoveries</h3>
+                    <div class="w-24 h-1 bg-emerald-400 mx-auto"></div>
+                </div>
+
+                <!-- Discovery 1: Image Left, Text Right -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="order-2 lg:order-1">
+                        <div class="discovery-card-enhanced glass-ultra rounded-2xl p-8 fade-in-up fade-in-up-1">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center mr-4 icon-hover">
+                                    <span class="text-emerald-400 text-xl">📚</span>
+                                </div>
+                                <h4 class="card-title text-2xl font-bold text-emerald-300 text-shimmer">The Canon of
+                                    Medicine</h4>
+                            </div>
+                            <p class="text-gray-300">
+                                An encyclopedia of medicine which systematically organized medical knowledge from
+                                ancient and Islamic sources. It was used as a standard medical textbook in Europe for
+                                over 600 years and introduced new clinical approaches to medicine.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="image-container glow-ultra fade-in-up fade-in-up-2">
+                            <img src="The Canon of Medicine.jpg" alt="Scientific Project Illustration">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discovery 2: Image Right, Text Left -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="fade-in-up fade-in-up-3">
+                        <div class="image-container glow-ultra">
+                            <img src="Philosophical Works.jpg" alt="Scientific Project Illustration">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in-up fade-in-up-3">
+                        <div class="discovery-card-enhanced glass-ultra rounded-2xl p-8">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center mr-4 icon-hover">
+                                    <span class="text-emerald-400 text-xl">🧠</span>
+                                </div>
+                                <h4 class="card-title text-2xl font-bold text-emerald-300 text-shimmer">Philosophical
+                                    Works</h4>
+                            </div>
+                            <p class="text-gray-300">
+                                His philosophical encyclopedia, "The Book of Healing," became a major philosophical text
+                                that influenced both Islamic and European thought, particularly on Aristotelian and
+                                Neoplatonic philosophy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discovery 3: Image Left, Text Right -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="discovery-card-enhanced glass-ultra rounded-2xl p-8 fade-in-up fade-in-up-4">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center mr-4 icon-hover">
+                                    <span class="text-emerald-400 text-xl">🔬</span>
+                                </div>
+                                <h4 class="card-title text-2xl font-bold text-emerald-300 text-shimmer">Scientific
+                                    Method</h4>
+                            </div>
+                            <p class="text-gray-300">
+                                Ibn Sina developed an early scientific method for inquiry, emphasizing empirical
+                                observation and experimentation in medicine and other sciences, laying groundwork for
+                                modern scientific approaches.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="image-container glow-ultra fade-in-up fade-in-up-4">
+                            <img src="Scientific Method.jpg" alt="Scientific Project Illustration">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote Section -->
+            <div class="container mx-auto px-6 pb-20">
+                <div class="relative mt-20">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-y-3">
+                    </div>
+                    <div class="glass-ultra rounded-3xl p-12 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 text-8xl opacity-10">"</div>
+                        <blockquote class="text-2xl md:text-3xl font-playfair italic text-gray-200 mb-4 relative z-10">
+                            "The seeker of knowledge is always in the path of God until the Day of Judgment."
+                        </blockquote>
+                        <cite class="text-lg text-gray-400">- Ibn Sina</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Al Khwarizmi Section -->
+        <section id="al-khwarizmi" class="scroll-section theme-purple relative overflow-hidden pattern-bg">
+            <!-- Background Shapes -->
+            <div class="absolute top-10 left-10 w-64 h-64 bg-purple-900 opacity-20 rounded-full morph-animation"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-indigo-800 opacity-20 rounded-full morph-animation"
+                style="animation-delay: 2s;"></div>
+
+            <!-- Additional Floating Elements -->
+            <div class="floating-element w-32 h-32 top-1/4 left-1/4 opacity-30"></div>
+            <div class="floating-element w-24 h-24 bottom-1/3 right-1/3 opacity-20" style="animation-delay: 1s;"></div>
+
+            <div class="container mx-auto px-6 py-20 lg:py-0 lg:min-h-screen flex items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
+                    <!-- Left Side - Scientist Image -->
+                    <div>
+                        <div class="image-container glow-ultra fade-in-up fade-in-up-1">
+                            <img src="A.jpg" alt="Muslim Scientist Portrait">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Scientist Info -->
+                    <div class="space-y-6">
+                        <div
+                            class="inline-block px-4 py-2 bg-purple-500/20 rounded-full text-purple-300 text-sm font-medium fade-in-up fade-in-up-1">
+                            Mathematics</div>
+                        <h2
+                            class="card-title text-5xl md:text-6xl lg:text-7xl font-playfair font-black text-shadow fade-in-up fade-in-up-2">
+                            Al Khwarizmi</h2>
+                        <p class="text-xl md:text-2xl text-purple-300 fade-in-up fade-in-up-2">The Father of Algebra</p>
+                        <p class="text-lg text-gray-300 leading-relaxed fade-in-up fade-in-up-3">
+                            Muhammad ibn Musa al-Khwarizmi was a Persian polymath who produced vastly influential works
+                            in mathematics, astronomy, and geography. His book "The Compendious Book on Calculation by
+                            Completion and Balancing" presented the first systematic solution of linear and quadratic
+                            equations.
+                        </p>
+                        <div class="pt-4 fade-in-up fade-in-up-4">
+                            <h3 class="text-2xl font-bold mb-3">Key Achievements</h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex items-start">
+                                    <span class="text-purple-400 mr-2">•</span>
+                                    Introduced systematic method for solving equations
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-purple-400 mr-2">•</span>
+                                    Pioneered decimal positional number system
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-purple-400 mr-2">•</span>
+                                    Compiled astronomical tables used for centuries
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discoveries Section -->
+            <div class="container mx-auto px-6 py-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 fade-in-up">Major Discoveries</h3>
+                    <div class="w-24 h-1 bg-purple-400 mx-auto"></div>
+                </div>
+
+                <!-- Discovery 1: Image Left, Text Right -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="order-2 lg:order-1">
+                        <div class="discovery-card-enhanced glass-ultra rounded-2xl p-8 fade-in-up fade-in-up-1">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center mr-4 icon-hover">
+                                    <span class="text-purple-400 text-xl">➕</span>
+                                </div>
+                                <h4 class="card-title text-2xl font-bold text-purple-300 text-shimmer">Algebra</h4>
+                            </div>
+                            <p class="text-gray-300">
+                                He introduced the systematic method of solving linear and quadratic equations, which is
+                                the foundation of modern algebra. The word "algebra" itself comes from the title of his
+                                book.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="image-container glow-ultra fade-in-up fade-in-up-2">
+                            <img src="Algebra.jpg" alt="Scientific Project Illustration">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discovery 2: Image Right, Text Left -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="fade-in-up fade-in-up-3">
+                        <div class="image-container glow-ultra">
+                            <img src="Algorithm.jpg" alt="Scientific Project Illustration">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in-up fade-in-up-3">
+                        <div class="discovery-card-enhanced glass-ultra rounded-2xl p-8">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center mr-4 icon-hover">
+                                    <span class="text-purple-400 text-xl">🧮</span>
+                                </div>
+                                <h4 class="card-title text-2xl font-bold text-purple-300 text-shimmer">Algorithm</h4>
+                            </div>
+                            <p class="text-gray-300">
+                                The word "algorithm" is derived from the Latinized version of his name, Algoritmi. His
+                                works on Indian numerals introduced the decimal positional number system to the Western
+                                world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discovery 3: Image Left, Text Right -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="discovery-card-enhanced glass-ultra rounded-2xl p-8 fade-in-up fade-in-up-4">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center mr-4 icon-hover">
+                                    <span class="text-purple-400 text-xl">⭐</span>
+                                </div>
+                                <h4 class="card-title text-2xl font-bold text-purple-300 text-shimmer">Astronomical
+                                    Tables</h4>
+                            </div>
+                            <p class="text-gray-300">
+                                Al-Khwarizmi compiled astronomical tables that incorporated Indian and Greek
+                                astronomical knowledge, which were used for centuries in the Islamic world and later in
+                                Europe.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="image-container glow-ultra fade-in-up fade-in-up-4">
+                            <img src="Astronomical Tables.jpg" alt="Scientific Project Illustration">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote Section -->
+            <div class="container mx-auto px-6 pb-20">
+                <div class="relative mt-20">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-y-3">
+                    </div>
+                    <div class="glass-ultra rounded-3xl p-12 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 text-8xl opacity-10">"</div>
+                        <blockquote class="text-2xl md:text-3xl font-playfair italic text-gray-200 mb-4 relative z-10">
+                            "That which is closest to things is that which knows their particulars."
+                        </blockquote>
+                        <cite class="text-lg text-gray-400">- Al Khwarizmi</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Al Biruni Section -->
+        <section id="al-biruni" class="scroll-section theme-cosmic relative overflow-hidden pattern-bg">
+            <!-- Background Shapes -->
+            <div class="absolute top-10 right-10 w-64 h-64 bg-violet-900 opacity-20 rounded-full morph-animation"></div>
+            <div class="absolute bottom-10 left-10 w-96 h-96 bg-purple-800 opacity-20 rounded-full morph-animation"
+                style="animation-delay: 2s;"></div>
+
+            <!-- Additional Floating Elements -->
+            <div class="floating-element w-36 h-36 top-1/4 left-1/4 opacity-30"></div>
+            <div class="floating-element w-28 h-28 bottom-1/3 right-1/3 opacity-20" style="animation-delay: 1s;"></div>
+
+            <div class="container mx-auto px-6 py-20 lg:py-0 lg:min-h-screen flex items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
+                    <!-- Left Side - Scientist Image -->
+                    <div class="order-2 lg:order-1">
+                        <div class="image-container glow-ultra fade-in-up fade-in-up-1">
+                            <img src="Al Biruni.jpg" alt="Muslim Scientist Portrait">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-violet-900/20 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Scientist Info -->
+                    <div class="order-1 lg:order-2 space-y-6">
+                        <div
+                            class="inline-block px-4 py-2 bg-violet-500/20 rounded-full text-violet-300 text-sm font-medium fade-in-up fade-in-up-1">
+                            Astronomy</div>
+                        <h2
+                            class="card-title text-5xl md:text-6xl lg:text-7xl font-playfair font-black text-shadow fade-in-up fade-in-up-2">
+                            Al Biruni</h2>
+                        <p class="text-xl md:text-2xl text-violet-300 fade-in-up fade-in-up-2">The Master of Astronomy
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed fade-in-up fade-in-up-3">
+                            Abu Rayhan al-Biruni was a Persian scholar and polymath who made significant contributions
+                            to mathematics, astronomy, physics, and natural sciences. He is regarded as one of the
+                            greatest scholars of the Islamic Golden Age and his works spanned various disciplines.
+                        </p>
+                        <div class="pt-4 fade-in-up fade-in-up-4">
+                            <h3 class="text-2xl font-bold mb-3">Key Achievements</h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex items-start">
+                                    <span class="text-violet-400 mr-2">•</span>
+                                    Calculated Earth's circumference with remarkable accuracy
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-violet-400 mr-2">•</span>
+                                    Invented several astronomical instruments
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-violet-400 mr-2">•</span>
+                                    Pioneer in comparative religion studies
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discoveries Section -->
+            <div class="container mx-auto px-6 py-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 fade-in-up">Major Discoveries</h3>
+                    <div class="w-24 h-1 bg-violet-400 mx-auto"></div>
+                </div>
+
+                <!-- Discovery 1: Image Left, Text Right -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="order-2 lg:order-1">
+                        <div class="discovery-card-enhanced glass-ultra rounded-2xl p-8 fade-in-up fade-in-up-1">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center mr-4 icon-hover">
+                                    <span class="text-violet-400 text-xl">🌍</span>
+                                </div>
+                                <h4 class="card-title text-2xl font-bold text-violet-300 text-shimmer">Earth's
+                                    Measurements</h4>
+                            </div>
+                            <p class="text-gray-300">
+                                Al-Biruni calculated the Earth's circumference with remarkable accuracy, arriving at a
+                                value within 4% of the modern measurement. He also determined the Earth's radius using
+                                trigonometric calculations.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="image-container glow-ultra fade-in-up fade-in-up-2">
+                            <img src="Earth's Measurements.jpg" alt="Scientific Project Illustration">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-violet-900/20 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discovery 2: Image Right, Text Left -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="fade-in-up fade-in-up-3">
+                        <div class="image-container glow-ultra">
+                            <img src="Astronomical Instruments.jpg" alt="Scientific Project Illustration">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-violet-900/20 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in-up fade-in-up-3">
+                        <div class="discovery-card-enhanced glass-ultra rounded-2xl p-8">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center mr-4 icon-hover">
+                                    <span class="text-violet-400 text-xl">🔭</span>
+                                </div>
+                                <h4 class="card-title text-2xl font-bold text-violet-300 text-shimmer">Astronomical
+                                    Instruments</h4>
+                            </div>
+                            <p class="text-gray-300">
+                                He invented several astronomical instruments and wrote extensively on their use. His
+                                astrolabe designs were particularly influential in medieval astronomy and navigation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discovery 3: Image Left, Text Right -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="discovery-card-enhanced glass-ultra rounded-2xl p-8 fade-in-up fade-in-up-4">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center mr-4 icon-hover">
+                                    <span class="text-violet-400 text-xl">📖</span>
+                                </div>
+                                <h4 class="card-title text-2xl font-bold text-violet-300 text-shimmer">Comparative
+                                    Religion</h4>
+                            </div>
+                            <p class="text-gray-300">
+                                Al-Biruni was a pioneer in the study of comparative religion, writing detailed accounts
+                                of various religions with remarkable objectivity for his time. His works provided
+                                valuable insights into different cultures and beliefs.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="image-container glow-ultra fade-in-up fade-in-up-4">
+                            <img src="Comparative Religion.jpg" alt="Scientific Project Illustration">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-violet-900/20 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote Section -->
+            <div class="container mx-auto px-6 pb-20">
+                <div class="relative mt-20">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-y-3">
+                    </div>
+                    <div class="glass-ultra rounded-3xl p-12 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 text-8xl opacity-10">"</div>
+                        <blockquote class="text-2xl md:text-3xl font-playfair italic text-gray-200 mb-4 relative z-10">
+                            "The quest for knowledge is an obligation upon every Muslim."
+                        </blockquote>
+                        <cite class="text-lg text-gray-400">- Al Biruni</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section id="numbers" class="scroll-section py-20 theme-cosmic relative overflow-hidden pattern-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-4xl md:text-5xl font-playfair font-black text-center mb-16 fade-in-up">
+                    <span class="gradient-text bg-gradient-to-r from-purple-400 to-pink-400">By the Numbers</span>
+                </h2>
+
+                <!-- Additional Floating Elements -->
+                <div class="floating-element w-40 h-40 top-1/4 left-1/4 opacity-20"></div>
+                <div class="floating-element w-32 h-32 bottom-1/3 right-1/3 opacity-15" style="animation-delay: 1s;">
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center fade-in-up fade-in-up-1">
+                        <div class="text-4xl md:text-5xl font-bold text-purple-300 mb-2 bounce-animation">600+</div>
+                        <p class="text-gray-300 text-sm md:text-base">Years of Influence</p>
+                    </div>
+                    <div class="text-center fade-in-up fade-in-up-2">
+                        <div class="text-4xl md:text-5xl font-bold text-pink-300 mb-2 bounce-animation"
+                            style="animation-delay: 0.5s;">1000+</div>
+                        <p class="text-gray-300 text-sm md:text-base">Scientific Works</p>
+                    </div>
+                    <div class="text-center fade-in-up fade-in-up-3">
+                        <div class="text-4xl md:text-5xl font-bold text-blue-300 mb-2 bounce-animation"
+                            style="animation-delay: 1s;">50+</div>
+                        <p class="text-gray-300 text-sm md:text-base">Fields of Study</p>
+                    </div>
+                    <div class="text-center fade-in-up fade-in-up-4">
+                        <div class="text-4xl md:text-5xl font-bold text-emerald-300 mb-2 rotate-animation">∞</div>
+                        <p class="text-gray-300 text-sm md:text-base">Legacy</p>
+                    </div>
+                </div>
+
+                <!-- Progress Bars -->
+                <div class="mt-16 space-y-6">
+                    <div class="fade-in-up fade-in-up-1">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Medicine</span>
+                            <span class="text-gray-400">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-emerald-400 h-2.5 rounded-full progress-animation"
+                                style="--progress-width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="fade-in-up fade-in-up-2">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Mathematics</span>
+                            <span class="text-gray-400">92%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-purple-400 h-2.5 rounded-full progress-animation"
+                                style="--progress-width: 92%"></div>
+                        </div>
+                    </div>
+
+                    <div class="fade-in-up fade-in-up-3">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Astronomy</span>
+                            <span class="text-gray-400">78%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-blue-400 h-2.5 rounded-full progress-animation"
+                                style="--progress-width: 78%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Gallery Section -->
+        <section class="scroll-section py-20 theme-blue relative overflow-hidden pattern-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-4xl md:text-5xl font-playfair font-black text-center mb-16 fade-in-up">
+                    <span class="gradient-text bg-gradient-to-r from-blue-400 to-purple-400">Gallery of Discovery</span>
+                </h2>
+
+                <!-- Additional Floating Elements -->
+                <div class="floating-element w-32 h-32 top-1/4 left-1/4 opacity-25"></div>
+                <div class="floating-element w-24 h-24 bottom-1/3 right-1/3 opacity-15" style="animation-delay: 1s;">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="gallery-image-container fade-in-up fade-in-up-1">
+                        <img src="1.jpg" alt="Scientific Discovery">
+                        <div class="p-4 glass-ultra slide-in-animation">
+                            <h3 class="text-xl font-bold mb-2">Medical Instruments</h3>
+                            <p class="text-gray-300 text-sm">Revolutionary tools developed by Muslim physicians</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-image-container fade-in-up fade-in-up-2">
+                        <img src="2.jpg" alt="Scientific Discovery">
+                        <div class="p-4 glass-ultra slide-in-animation" style="animation-delay: 0.2s;">
+                            <h3 class="text-xl font-bold mb-2">Astronomical Charts</h3>
+                            <p class="text-gray-300 text-sm">Detailed maps of the stars and planets</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-image-container fade-in-up fade-in-up-3">
+                        <img src="3.jpg" alt="Scientific Discovery">
+                        <div class="p-4 glass-ultra slide-in-animation" style="animation-delay: 0.4s;">
+                            <h3 class="text-xl font-bold mb-2">Mathematical Concepts</h3>
+                            <p class="text-gray-300 text-sm">Foundational principles of modern mathematics</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-image-container fade-in-up fade-in-up-4">
+                        <img src="4.jpg" alt="Scientific Discovery">
+                        <div class="p-4 glass-ultra slide-in-animation" style="animation-delay: 0.6s;">
+                            <h3 class="text-xl font-bold mb-2">Chemical Processes</h3>
+                            <p class="text-gray-300 text-sm">Early innovations in alchemy and chemistry</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-image-container fade-in-up fade-in-up-5">
+                        <img src="5 (2).jpg" alt="Scientific Discovery">
+                        <div class="p-4 glass-ultra slide-in-animation" style="animation-delay: 0.8s;">
+                            <h3 class="text-xl font-bold mb-2">Optical Devices</h3>
+                            <p class="text-gray-300 text-sm">Early developments in optics and vision</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-image-container fade-in-up fade-in-up-6">
+                        <img src="6.jpg" alt="Scientific Discovery">
+                        <div class="p-4 glass-ultra slide-in-animation" style="animation-delay: 1s;">
+                            <h3 class="text-xl font-bold mb-2">Engineering Marvels</h3>
+                            <p class="text-gray-300 text-sm">Innovative architectural and mechanical designs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bonus Section: Islamic Golden Age Achievements -->
+        <section class="scroll-section py-20 theme-gold relative overflow-hidden pattern-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-4xl md:text-5xl font-playfair font-black text-center mb-16 fade-in-up">
+                    <span class="gradient-text bg-gradient-to-r from-yellow-400 to-orange-400">Islamic Golden Age
+                        Achievements</span>
+                </h2>
+
+                <div class="mt-12">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-8 text-center fade-in-up fade-in-up-4">
+                        <span class="gradient-text bg-gradient-to-r from-yellow-400 to-orange-400">Legacy of
+                            Innovation</span>
+                    </h3>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8 fade-in-up fade-in-up-5">
+                        The Islamic Golden Age was a period of cultural, economic, and scientific flourishing in the
+                        history of
+                        Islam, lasting from the 8th to the 14th century.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="scroll-section theme-blue relative overflow-hidden pattern-bg footer-glow">
+            <!-- Background Shapes -->
+            <div class="absolute top-10 left-10 w-64 h-64 bg-blue-900 opacity-20 rounded-full morph-animation"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-indigo-800 opacity-20 rounded-full morph-animation"
+                style="animation-delay: 2s;"></div>
+
+            <!-- Additional Floating Elements -->
+            <div class="floating-element w-40 h-40 top-1/4 left-1/4 opacity-20"></div>
+            <div class="floating-element w-32 h-32 bottom-1/3 right-1/3 opacity-15" style="animation-delay: 1s;"></div>
+
+            <div class="container mx-auto px-6 py-20 relative z-10">
+                <div class="text-center">
+                    <h2
+                        class="section-title text-3xl md:text-4xl lg:text-5xl font-playfair font-black mb-6 text-shadow fade-in-up">
+                        <span class="gradient-text bg-gradient-to-r from-blue-400 to-violet-400">The Legacy
+                            Continues</span>
+                    </h2>
+                    <div class="w-32 h-1 bg-gradient-to-r from-blue-400 to-violet-400 mx-auto mb-8"></div>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12 fade-in-up fade-in-up-1">
+                        The luminaries of the Islamic Golden Age illuminated the path of knowledge for generations to
+                        come.
+                        Their discoveries in medicine, mathematics, astronomy, and philosophy laid the foundation for
+                        modern
+                        science.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                        <div class="glass-ultra rounded-2xl p-8 text-center fade-in-up fade-in-up-2">
+                            <div
+                                class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                <span class="text-blue-400 text-2xl bounce-animation">📚</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Knowledge</h3>
+                            <p class="text-gray-300">The pursuit of knowledge is a sacred duty</p>
+                        </div>
+
+                        <div class="glass-ultra rounded-2xl p-8 text-center fade-in-up fade-in-up-3">
+                            <div
+                                class="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-500/20 flex items-center justify-center">
+                                <span class="text-purple-400 text-2xl bounce-animation"
+                                    style="animation-delay: 0.5s;">🔬</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Innovation</h3>
+                            <p class="text-gray-300">Building upon wisdom of the past</p>
+                        </div>
+
+                        <div class="glass-ultra rounded-2xl p-8 text-center fade-in-up fade-in-up-4">
+                            <div
+                                class="w-16 h-16 mx-auto mb-4 rounded-full bg-violet-500/20 flex items-center justify-center">
+                                <span class="text-violet-400 text-2xl bounce-animation"
+                                    style="animation-delay: 1s;">🌟</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Inspiration</h3>
+                            <p class="text-gray-300">Honoring our heritage</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-ultra rounded-2xl p-8 max-w-2xl mx-auto mb-12 fade-in-up">
+                        <p class="text-xl text-blue-300 font-medium mb-2">
+                            "The ink of the scholar is more sacred than the blood of the martyr."
+                        </p>
+                        <p class="text-gray-400">- Prophet Muhammad (peace be upon him)</p>
+                    </div>
+
+                    <div class="border-t border-gray-800 pt-8">
+                        <p class="text-gray-400">
+                            © 2026 Luminaries Exhibition. A tribute to Muslim scientists who shaped our world.
+                        </p>
+                        <p class="text-gray-500 text-sm cursor-pointer hover:text-gray-300 transition mt-2"
+                            title="You found it!">
+                            <span class="opacity-20">HTML + CSS + Tailwind Only made by Amanot ullah</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
